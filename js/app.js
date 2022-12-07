@@ -3,8 +3,6 @@ const inputElement = document.querySelector("#input")
 const buttonElement = document.querySelector("#submit-button")
 const ulElement = document.querySelector("#todo-list")
 const resetElement = document.querySelector("#reset-button")
-const todoItems = document.querySelectorAll(".todo-item")
-
 
 //console.log tests
 //console.log(todoItems)
@@ -25,3 +23,11 @@ resetElement.addEventListener("click", function(){
   ulElement.innerHTML = ""
   inputElement.value = ""
 })
+
+ulElement.addEventListener("click", handleClick)
+
+//helper functions
+function handleClick(evt){
+  console.log("click handled")
+  evt.target.remove()
+}
