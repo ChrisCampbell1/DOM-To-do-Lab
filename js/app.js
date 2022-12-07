@@ -11,6 +11,8 @@ console.log(inputElement)
 buttonElement.addEventListener("click", function(){
   const liElement = document.createElement("li")
   liElement.textContent = inputElement.value
+  if(liElement.textContent){
   ulElement.appendChild(liElement)
   inputElement.value = ""
+  }
 })
