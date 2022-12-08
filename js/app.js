@@ -14,8 +14,8 @@ buttonElement.addEventListener("click", function(){
   liElement.setAttribute("class", "todo-item")
   liElement.textContent = inputElement.value
   if(liElement.textContent){
-  ulElement.appendChild(liElement)
-  inputElement.value = ""
+    ulElement.appendChild(liElement)
+    inputElement.value = ""
   }
 })
 
@@ -28,6 +28,5 @@ ulElement.addEventListener("click", handleClick)
 
 //helper functions
 function handleClick(evt){
-  console.log("click handled")
   evt.target.remove()
 }
